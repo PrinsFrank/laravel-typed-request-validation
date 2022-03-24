@@ -5,13 +5,22 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Prinsfrank\\LaravelTypedRequestValidation\\": "src/"
+            "PrinsFrank\\LaravelTypedRequestValidation\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Prinsfrank\\LaravelTypedRequestValidation\\Tests": "tests/"
+            "PrinsFrank\\LaravelTypedRequestValidation\\Tests\\": "tests/"
         }
     },
-    "require": {}
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PrinsFrank\\LaravelTypedRequestValidation\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "illuminate/support": "^9.0"
+    }
 }
