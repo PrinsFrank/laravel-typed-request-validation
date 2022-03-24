@@ -2,29 +2,20 @@
 
 namespace {{ namespace }};
 
-use Illuminate\Foundation\Http\FormRequest;
+use PrinsFrank\LaravelTypedRequestValidation\FormRequest;
+use PrinsFrank\PhpStrictModels\Rule\Between;
+use PrinsFrank\PhpStrictModels\Rule\Url;
 
 class {{ class }} extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-    public function authorize()
+    #[Between(1,5)]
+    protected ?int $foo;
+
+    #[Url]
+    protected ?string $url;
+
+    public function authorize(): bool
     {
         return false;
-    }
-
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
-    public function rules()
-    {
-        return [
-            //
-        ];
     }
 }
