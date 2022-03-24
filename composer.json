@@ -1,0 +1,17 @@
+{
+    "name": "prinsfrank/laravel-typed-request-validation",
+    "description": "Typed request validation for laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Prinsfrank\\LaravelTypedRequestValidation\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Prinsfrank\\LaravelTypedRequestValidation\\Tests": "tests/"
+        }
+    },
+    "require": {}
+}
